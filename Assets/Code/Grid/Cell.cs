@@ -4,8 +4,21 @@ using System.Collections;
 public class Cell : MonoBehaviour
 {
     public UISprite CellSprite;
-    public Color ActiveColor;
-    public Color NormalColor;
+    public Color NormalColor = Color.white;
+    public Color PassableColor = Color.green;
+    public Color ImpassableColor = Color.red;
+
+    public int x;
+    public int z;
+
+    private CellState mDisplyedState = CellState.Normal;
+
+    public enum CellState
+    {
+        Normal,
+        Passable,
+        Impassable
+    }
 
     private void Start()
     {
@@ -17,15 +30,20 @@ public class Cell : MonoBehaviour
         GameObject.Destroy(gameObject);
     }
 
-    private void OnHover(bool isOver)
+
+    public void ToggleCellState(CellState state)
     {
-        if(isOver)
+        switch(state)
         {
-            CellSprite.color = ActiveColor;
-        }
-        else
-        {
+        case CellState.Normal:
             CellSprite.color = NormalColor;
+        break;
+        case CellState.Passable:
+            CellSprite.color = PassableColor;
+        break;
+        case CellState.Impassable:
+            CellSprite.color = ImpassableColor;
+        break;
         }
     }
 

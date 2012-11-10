@@ -5,26 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-public class GridManager : MonoBehaviour
+public class GridManager : SingletonComponent<GridManager>
 {
     public class CellMatch
     {
         public List<Cell> matched = new List<Cell>();
         public List<Cell> notMatched = new List<Cell>();
-    }
-
-    private static GridManager mInstance = null;
-
-    public static GridManager Instance
-    {
-        get
-        {
-            if(mInstance == null)
-            {
-                mInstance = GameObject.FindGameObjectWithTag("GridManager").GetComponent<GridManager>();
-            }
-            return mInstance;
-        }
     }
 
     public GameObject GridCellPrefab;

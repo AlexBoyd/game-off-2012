@@ -11,7 +11,7 @@ public class Cell : MonoBehaviour
     public int x;
     public int z;
 
-    private CellState mDisplyedState = CellState.Normal;
+    private CellState mState = CellState.Normal;
 
     public enum CellState
     {
@@ -25,14 +25,18 @@ public class Cell : MonoBehaviour
         CellSprite.color = NormalColor;
     }
 
-    private void OnDoubleClick()
+    private void OnClick()
     {
-        GameObject.Destroy(gameObject);
+        if(mState == CellState.Passable)
+        {
+            MovementManager.Instance.MoveSelectedCharacter(new Character.CharPosition(x,z));
+        }
     }
 
 
     public void ToggleCellState(CellState state)
     {
+        mState = state;
         switch(state)
         {
         case CellState.Normal:

@@ -47,6 +47,9 @@
      <Compile Include="Assets\Code\Character.cs" />
      <Compile Include="Assets\Code\Grid\Cell.cs" />
      <Compile Include="Assets\Code\Grid\GridManager.cs" />
+     <Compile Include="Assets\Code\Systems\MovementManager.cs" />
+     <Compile Include="Assets\Code\Systems\SelectionManager.cs" />
+     <Compile Include="Assets\Code\Utility\SingletonComponent.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\ChatInput.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\DownloadTexture.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\DragDropContainer.cs" />

@@ -22,6 +22,10 @@ public class SelectionManager : SingletonComponent<SelectionManager>
         }
         else
         {
+            if(mSelectedCharacter != null)
+            {
+                mSelectedCharacter.ToggleSelection();
+            }
             mSelectedCharacter = character;
             return true;
         }

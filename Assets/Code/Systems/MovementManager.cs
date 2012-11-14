@@ -5,6 +5,10 @@ public class MovementManager : SingletonComponent<MovementManager>
 {
     public void MoveSelectedCharacter(Character.CharPosition position)
     {
-        SelectionManager.Instance.SelectedCharacter.Position = position;
+        if(SelectionManager.Instance.SelectedCharacter != null)
+        {
+            SelectionManager.Instance.SelectedCharacter.Position = position;
+            SelectionManager.Instance.SelectedCharacter.ToggleSelection();
+        }
     }
 }

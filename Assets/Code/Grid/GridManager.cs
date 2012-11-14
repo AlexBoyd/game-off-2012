@@ -35,8 +35,8 @@ public class GridManager : SingletonComponent<GridManager>
                 Cell cell = (GameObject.Instantiate(GridCellPrefab, new Vector3(i, 0, j), Quaternion.identity) as GameObject).GetComponent<Cell>();
                 mCells.Add(cell);
                 cell.transform.parent = Panel.transform;
-                cell.x = j;
-                cell.z = i;
+                cell.x = i;
+                cell.z = j;
             }
         }
     }

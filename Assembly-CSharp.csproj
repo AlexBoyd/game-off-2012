@@ -44,11 +44,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Code\Character.cs" />
+     <Compile Include="Assets\Code\Character\Character.cs" />
+     <Compile Include="Assets\Code\Character\Equipement\ArmorObject.cs" />
+     <Compile Include="Assets\Code\Character\Equipement\WeaponObject.cs" />
      <Compile Include="Assets\Code\Grid\Cell.cs" />
      <Compile Include="Assets\Code\Grid\GridManager.cs" />
+     <Compile Include="Assets\Code\Systems\BattleSystem.cs" />
      <Compile Include="Assets\Code\Systems\MovementManager.cs" />
      <Compile Include="Assets\Code\Systems\SelectionManager.cs" />
+     <Compile Include="Assets\Code\UI\ActionsHUD.cs" />
+     <Compile Include="Assets\Code\UI\ButtonControl.cs" />
+     <Compile Include="Assets\Code\UI\UICameraSingleton.cs" />
+     <Compile Include="Assets\Code\UI\UnitHUD.cs" />
      <Compile Include="Assets\Code\Utility\SingletonComponent.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\ChatInput.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\DownloadTexture.cs" />
